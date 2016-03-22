@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Javac" />
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for javaBasics" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="javaBasics" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="consumer" />
+        <module name="curator" />
+        <module name="http-consumer" />
+        <module name="http-interfaces" />
+        <module name="http-provider" />
+        <module name="http-rpc" />
+        <module name="interfaces" />
+        <module name="javaApi" />
+        <module name="provider" />
+        <module name="rpcz" />
+        <module name="zkclient" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="consumer" target="1.5" />
+      <module name="curator" target="1.5" />
+      <module name="http-consumer" target="1.5" />
+      <module name="http-interfaces" target="1.5" />
+      <module name="http-provider" target="1.5" />
+      <module name="http-rpc" target="1.5" />
+      <module name="interfaces" target="1.5" />
+      <module name="javaApi" target="1.5" />
+      <module name="javaBasics" target="1.8" />
+      <module name="provider" target="1.5" />
+      <module name="rpcz" target="1.5" />
+      <module name="zkclient" target="1.5" />
+      <module name="zookeeper" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

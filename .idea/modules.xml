@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/distributed/rpc-zookeeper/consumer/consumer.iml" filepath="$PROJECT_DIR$/distributed/rpc-zookeeper/consumer/consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/zookeeper/curator/curator.iml" filepath="$PROJECT_DIR$/distributed/zookeeper/curator/curator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/distributed.iml" filepath="$PROJECT_DIR$/distributed/distributed.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/rpcDemo/http-consumer/http-consumer.iml" filepath="$PROJECT_DIR$/distributed/rpcDemo/http-consumer/http-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/rpcDemo/http-interfaces/http-interfaces.iml" filepath="$PROJECT_DIR$/distributed/rpcDemo/http-interfaces/http-interfaces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/rpcDemo/http-provider/http-provider.iml" filepath="$PROJECT_DIR$/distributed/rpcDemo/http-provider/http-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/rpcDemo/http-rpc/http-rpc.iml" filepath="$PROJECT_DIR$/distributed/rpcDemo/http-rpc/http-rpc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/rpc-zookeeper/interfaces/interfaces.iml" filepath="$PROJECT_DIR$/distributed/rpc-zookeeper/interfaces/interfaces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/zookeeper/javaApi/javaApi.iml" filepath="$PROJECT_DIR$/distributed/zookeeper/javaApi/javaApi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaBasics/javaBasics.iml" filepath="$PROJECT_DIR$/javaBasics/javaBasics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/javaStudySpace.iml" filepath="$PROJECT_DIR$/.idea/javaStudySpace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/rpc-zookeeper/provider/provider.iml" filepath="$PROJECT_DIR$/distributed/rpc-zookeeper/provider/provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/rpc-zookeeper/rpc-zookeeper.iml" filepath="$PROJECT_DIR$/distributed/rpc-zookeeper/rpc-zookeeper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/rpcDemo/rpcDemo.iml" filepath="$PROJECT_DIR$/distributed/rpcDemo/rpcDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/rpc-zookeeper/rpcz/rpcz.iml" filepath="$PROJECT_DIR$/distributed/rpc-zookeeper/rpcz/rpcz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/zookeeper/zkclient/zkclient.iml" filepath="$PROJECT_DIR$/distributed/zookeeper/zkclient/zkclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/zookeeper/zookeeper.iml" filepath="$PROJECT_DIR$/distributed/zookeeper/zookeeper.iml" />
+    </modules>
+  </component>
+</project>
