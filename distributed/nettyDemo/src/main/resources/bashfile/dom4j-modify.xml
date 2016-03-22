@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<devdig>
+    <!--设备基本信息-->
+    <systeminfo>
+        <!--产品序列号-->
+        <serialno>0013320b00e3.001</serialno>
+        <!-- 设备版本号-->
+        <version>3.3.020.043.1_D8049_1</version>
+        <!--eth0的mac地址-->
+        <eth0macaddr>0013320b00e3</eth0macaddr>
+        <!-- 设备型号 -->
+        <product>TopVpn6000(TV-41604-VONE)</product>
+
+        <!--设备性能信息-cpu状态-->
+        <cpuload>20</cpuload>
+        <!--设备性能信息-内存使用状态-->
+        <memload>40</memload>
+        <!--设备性能信息-流量统计-->
+        <flow>2045</flow>
+        <!--设备性能信息-并发连接数-->
+        <currentconnect>200</currentconnect>
+        <!--设备性能信息-每秒新建数-->
+        <cps>30</cps>
+        <!--设备性能信息-运行时长-->
+        <uptime>45</uptime>
+        <!--设备接收流量，以octet为单位-->
+        <receive>634938550</receive>
+        <!--设备发送流量，以octet为单位-->
+        <transmit>31912</transmit>
+    </systeminfo>
+    <ha>
+        <!--ha运行状态，可能的取值有：notrun；master；backup-->
+        <status>notrun</status>
+        <!--ha的工作模式，可能的取值有：aa；as；sp-->
+        <mode>aa</mode>
+    </ha>
+    <user>
+        <!--用户名称-->
+        <name>username</name>
+        <!--管理员手机号-->
+        <phonenumber>1380010001</phonenumber>
+        <!--管理员邮箱地址-->
+        <email>admin@client.com.cn</email>
+    </user>
+</devdig>
