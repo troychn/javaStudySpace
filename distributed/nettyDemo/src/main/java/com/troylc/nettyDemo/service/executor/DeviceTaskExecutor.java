@@ -2,7 +2,6 @@ package com.troylc.nettyDemo.service.executor;
 
 import com.troylc.nettyDemo.domain.DmpDeviceInfoEntity;
 import com.troylc.nettyDemo.service.DeviceInfoService;
-import com.troylc.nettyDemo.service.TaskCacheService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -20,9 +19,6 @@ public class DeviceTaskExecutor implements Runnable {
 
     @Resource
     private DeviceInfoService deviceInfoService;
-
-    @Resource
-    private TaskCacheService taskCacheService;
 
     private DmpDeviceInfoEntity deviceInfoEntity;
 

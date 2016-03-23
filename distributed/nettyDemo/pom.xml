@@ -32,7 +32,6 @@
         <jaxen.version>1.1.6</jaxen.version>
         <jstl.version>1.2</jstl.version>
         <taglibs.version>1.1.2</taglibs.version>
-        <jackson-core.version>2.6.3</jackson-core.version>
     </properties>
 
     <dependencies>
@@ -44,12 +43,6 @@
             <version>${spring.version}</version>
             <type>pom</type>
             <scope>import</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${jackson-core.version}</version>
         </dependency>
 
         <dependency>
@@ -192,5 +185,112 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <verbose>true</verbose>
+                    <target>${java.version}</target>
+                    <source>${java.version}</source>
+                    <fork>true</fork>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>
+                                ${project.build.directory}/${project.artifactId}/lib
+                            </outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>
+                                com.topsec.dmpservice.nettyserver.AppServer
+                            </mainClass>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>../lib</classpathPrefix>
+                        </manifest>
+                    </archive>
+                    <excludes>
+                        <exclude>**/*.properties</exclude>
+                        <exclude>**/*.xml</exclude>
+                    </excludes>
+                    <outputDirectory>
+                        ${project.build.directory}/${project.artifactId}/bin
+                    </outputDirectory>
+                </configuration>
+            </plugin>
+            <!-- 将dependence的所有jar集中封装成一个jar -->
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.5.4</version>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <copy todir="${project.build.directory}/${project.artifactId}/conf">
+                                    <fileset includes="**/*.*" dir="${basedir}/src/main/resources"></fileset>
+                                </copy>
+                                <copy todir="${project.build.directory}/${project.artifactId}/lib">
+                                    <fileset includes="*jar-with-dependencies.jar"
+                                             dir="${project.build.directory}"></fileset>
+                                </copy>
+                                <copy todir="${project.build.directory}/${project.artifactId}/bin">
+                                    <fileset dir="${basedir}/src/main/script">
+                                        <include name="*.sh"/>
+                                    </fileset>
+                                </copy>
+                                <mkdir dir="${project.build.directory}/${project.artifactId}/logs"/>
+                            </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <defaultGoal>install</defaultGoal>
+    </build>
 
 </project>
