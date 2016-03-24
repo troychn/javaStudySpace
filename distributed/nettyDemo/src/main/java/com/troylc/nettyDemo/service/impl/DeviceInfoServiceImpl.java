@@ -1,17 +1,16 @@
 package com.troylc.nettyDemo.service.impl;
 
+import com.troylc.nettyDemo.dao.DeviceInfoDao;
 import com.troylc.nettyDemo.dao.DevicePerformanceDao;
 import com.troylc.nettyDemo.domain.DmpDeviceInfoEntity;
 import com.troylc.nettyDemo.domain.DmpDevicePerformanceEntity;
 import com.troylc.nettyDemo.redis.DeviceInfoRedisService;
 import com.troylc.nettyDemo.service.DeviceInfoService;
-import com.troylc.nettyDemo.service.executor.DeviceTaskExecutor;
 import com.troylc.nettyDemo.utils.DateUtils;
 import com.troylc.nettyDemo.utils.ResolveDeviceXml;
 import org.dom4j.Element;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.core.task.TaskExecutor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -33,8 +32,8 @@ public class DeviceInfoServiceImpl implements DeviceInfoService {
 
     private static Logger log = LoggerFactory.getLogger(DeviceInfoServiceImpl.class);
 
-    //@Resource
-    //private DeviceInfoDao deviceInfoDao;
+    @Resource
+    private DeviceInfoDao deviceInfoDao;
 
     @Resource
     private DeviceInfoRedisService deviceInfoRedisService;
@@ -43,11 +42,6 @@ public class DeviceInfoServiceImpl implements DeviceInfoService {
     private DevicePerformanceDao devicePerDao;
 
 
-    @Resource
-    private TaskExecutor taskExecutor;
-
-    @Resource
-    private DeviceTaskExecutor deviceTaskExecutor;
 
     /**
      * 保存设备基本信息,保存之前根据设备序列号与版本号查找是否有对应的设备存在，
@@ -66,9 +60,9 @@ public class DeviceInfoServiceImpl implements DeviceInfoService {
             deviceInfoEntity.setCreatetime(timestamp); //第一次上报设置第一次上报时间
         }
         deviceInfoEntity.setReporttime(DateUtils.parseDate(timestamp)); //设置每次上报时间
-        //DmpDeviceInfoEntity deviceInfo = deviceInfoDao.save(deviceInfoEntity);
+        DmpDeviceInfoEntity deviceInfo = deviceInfoDao.save(deviceInfoEntity);
         //操作缓存与数据库
-        DmpDeviceInfoEntity deviceInfo = deviceInfoRedisService.saveDeviceInfo(deviceInfoEntity);
+        //DmpDeviceInfoEntity deviceInfo = deviceInfoRedisService.saveDeviceInfo(deviceInfoEntity);
         //如果设备性能信息对象不为空，则保存设备性能信息
         if(deviceInfoEntity.getDevicePerformance() != null && deviceInfo != null){
             DmpDevicePerformanceEntity devicePerformance = deviceInfoEntity.getDevicePerformance();
@@ -90,8 +84,8 @@ public class DeviceInfoServiceImpl implements DeviceInfoService {
     /*@Cacheable(key = "targetClass + '.' + #serialnumber", value = "dmpDeviceInfoEntity")*/
     public DmpDeviceInfoEntity findBySerialNoAndVersion(String serialnumber) throws Exception {
         System.out.println("-----------------执行了findBySerialNoAndVersion--数据库查询------------------");
-        //return deviceInfoDao.findBySerialNoAndVersion(serialnumber);
-        return deviceInfoRedisService.findBySerialNoAndVersion(serialnumber);
+        return deviceInfoDao.findBySerialNoAndVersion(serialnumber);
+        //return deviceInfoRedisService.findBySerialNoAndVersion(serialnumber);
     }
 
 

@@ -71,12 +71,15 @@ public class HttpServerHandler extends SimpleChannelInboundHandler<FullHttpReque
                     log.debug("----postNetty--post--serialno=" + serialno + "-----version" + version + "--------");
                     //接收上报消息，或者更新任务状态。
                     httpPostHandler(request,serialno,version,systemType);
+                    sendReturnCode(ctx, OK);
                     return;
                 }
+                System.out.println("--------------------3-------------------");
                 //处理 /nettyDemo-netty url 的Get请求
                 if (request.method() == HttpMethod.GET) {
                     log.debug("----postNetty--get--serialno=" + serialno + "-----version" + version + "--------");
                     httpGetHander(ctx, request,serialno,version, systemType);
+                    sendReturnCode(ctx, OK);
                     return;
                 }
             } else if(uri.getPath().startsWith("/")){
