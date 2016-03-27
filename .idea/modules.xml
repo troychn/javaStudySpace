@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/distributed/zookeeper/javaApi/javaApi.iml" filepath="$PROJECT_DIR$/distributed/zookeeper/javaApi/javaApi.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaBasics/javaBasics.iml" filepath="$PROJECT_DIR$/javaBasics/javaBasics.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/javaStudySpace.iml" filepath="$PROJECT_DIR$/.idea/javaStudySpace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/nettyDemo/nettyDemo.iml" filepath="$PROJECT_DIR$/distributed/nettyDemo/nettyDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/distributed/rpc-zookeeper/provider/provider.iml" filepath="$PROJECT_DIR$/distributed/rpc-zookeeper/provider/provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/distributed/rpc-zookeeper/rpc-zookeeper.iml" filepath="$PROJECT_DIR$/distributed/rpc-zookeeper/rpc-zookeeper.iml" />
       <module fileurl="file://$PROJECT_DIR$/distributed/rpcDemo/rpcDemo.iml" filepath="$PROJECT_DIR$/distributed/rpcDemo/rpcDemo.iml" />

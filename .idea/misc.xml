@@ -19,6 +19,7 @@
         <option value="$PROJECT_DIR$/distributed/zookeeper/curator/pom.xml" />
         <option value="$PROJECT_DIR$/distributed/zookeeper/zkclient/pom.xml" />
         <option value="$PROJECT_DIR$/distributed/zookeeper/javaApi/pom.xml" />
+        <option value="$PROJECT_DIR$/distributed/nettyDemo/pom.xml" />
       </list>
     </option>
   </component>

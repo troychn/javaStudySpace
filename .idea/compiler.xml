@@ -42,6 +42,13 @@
         <module name="rpcz" />
         <module name="zkclient" />
       </profile>
+      <profile default="false" name="Annotation profile for nettyDemo" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="nettyDemo" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="consumer" target="1.5" />
@@ -53,6 +60,7 @@
       <module name="interfaces" target="1.5" />
       <module name="javaApi" target="1.5" />
       <module name="javaBasics" target="1.8" />
+      <module name="nettyDemo" target="1.8" />
       <module name="provider" target="1.5" />
       <module name="rpcz" target="1.5" />
       <module name="zkclient" target="1.5" />
