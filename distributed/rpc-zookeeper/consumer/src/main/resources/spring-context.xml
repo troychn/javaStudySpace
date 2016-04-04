@@ -15,14 +15,14 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-    <context:component-scan base-package="com.zookeeper.rpc" />
+    <context:component-scan base-package="com.troylc.rpc" />
     <context:annotation-config />
 
-    <bean id="consumerConfig" class="com.zookeeper.rpc.invoke.ConsumerConfig">
+    <bean id="consumerConfig" class="com.troylc.rpcz.invoke.ConsumerConfig">
         <property name="url" value="zookeeper://127.0.0.1:2181" />
     </bean>
 
-    <bean id="speakInterfaceInvoker" class="com.zookeeper.rpc.proxy.ConsumerProxyFactory">
+    <bean id="speakInterfaceInvoker" class="com.troylc.rpcz.proxy.ConsumerProxyFactory">
         <property name="consumerConfig" ref="consumerConfig"/>
         <property name="clazz" value="SpeakInterface"/>
     </bean>
