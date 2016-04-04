@@ -12,7 +12,7 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * 基于 ZooKeeper 的服务发现接口实现
  *
- * @author huangyong
+ * @author troylc
  * @since 1.0.0
  */
 public class ZooKeeperServiceDiscovery implements ServiceDiscovery {

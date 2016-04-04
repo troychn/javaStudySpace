@@ -3,7 +3,7 @@ package com.troylc.rpcserver.common.bean;
 /**
  * 封装 RPC 响应
  *
- * @author huangyong
+ * @author troylc
  * @since 1.0.0
  */
 public class RpcResponse {

@@ -3,7 +3,7 @@ package com.troylc.rpcserver.registryz.zookeeper;
 /**
  * 常量
  *
- * @author huangyong
+ * @author troylc
  * @since 1.0.0
  */
 public interface Constant {

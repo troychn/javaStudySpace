@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * RPC 服务端处理器（用于处理 RPC 请求）
  *
- * @author huangyong
+ * @author troylc
  * @since 1.0.0
  */
 public class RpcServerHandler extends SimpleChannelInboundHandler<RpcRequest> {
@@ -30,21 +30,6 @@ public class RpcServerHandler extends SimpleChannelInboundHandler<RpcRequest> {
         this.handlerMap = handlerMap;
     }
 
-    @Override
-    public void channelRead0(final ChannelHandlerContext ctx, RpcRequest request) throws Exception {
-        // 创建并初始化 RPC 响应对象
-        RpcResponse response = new RpcResponse();
-        response.setRequestId(request.getRequestId());
-        try {
-            Object result = handle(request);
-            response.setResult(result);
-        } catch (Exception e) {
-            LOGGER.error("handle result failure", e);
-            response.setException(e);
-        }
-        // 写入 RPC 响应对象并自动关闭连接
-        ctx.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
-    }
 
     private Object handle(RpcRequest request) throws Exception {
         // 获取服务对象
@@ -76,5 +61,22 @@ public class RpcServerHandler extends SimpleChannelInboundHandler<RpcRequest> {
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
         LOGGER.error("server caught exception", cause);
         ctx.close();
+    }
+
+    @Override
+    protected void messageReceived(ChannelHandlerContext ctx, RpcRequest rpcRequest) throws
+            Exception {
+        // 创建并初始化 RPC 响应对象
+        RpcResponse response = new RpcResponse();
+        response.setRequestId(rpcRequest.getRequestId());
+        try {
+            Object result = handle(rpcRequest);
+            response.setResult(result);
+        } catch (Exception e) {
+            LOGGER.error("handle result failure", e);
+            response.setException(e);
+        }
+        // 写入 RPC 响应对象并自动关闭连接
+        ctx.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
     }
 }

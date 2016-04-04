@@ -26,7 +26,7 @@ import java.util.Map;
 /**
  * RPC 服务器（用于发布 RPC 服务）
  *
- * @author huangyong
+ * @author troylc
  * @since 1.0.0
  */
 public class RpcServer implements ApplicationContextAware, InitializingBean {
@@ -102,7 +102,7 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
                     LOGGER.debug("register service: {} => {}", interfaceName, serviceAddress);
                 }
             }
-            LOGGER.debug("server started on port-启动Netty服务成功，端口号：", port);
+            LOGGER.debug("server started on port-启动Netty服务成功，端口号："+ port);
             // 关闭 RPC 服务器
             future.channel().closeFuture().sync();
         } finally {

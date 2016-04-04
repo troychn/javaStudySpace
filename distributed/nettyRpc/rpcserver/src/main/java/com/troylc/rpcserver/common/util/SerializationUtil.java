@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * 序列化工具类（基于 Protostuff 实现）
  *
- * @author huangyong
+ * @author troylc
  * @since 1.0.0
  */
 public class SerializationUtil {

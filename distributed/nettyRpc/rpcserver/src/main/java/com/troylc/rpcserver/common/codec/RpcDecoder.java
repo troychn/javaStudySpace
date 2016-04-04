@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * RPC 解码器
  *
- * @author huangyong
+ * @author troylc
  * @since 1.0.0
  */
 public class RpcDecoder extends ByteToMessageDecoder {

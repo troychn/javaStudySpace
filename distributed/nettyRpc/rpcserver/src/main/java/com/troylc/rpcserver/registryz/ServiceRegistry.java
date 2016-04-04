@@ -3,7 +3,7 @@ package com.troylc.rpcserver.registryz;
 /**
  * 服务注册接口
  *
- * @author huangyong
+ * @author troylc
  * @since 1.0.0
  */
 public interface ServiceRegistry {

@@ -16,7 +16,7 @@ public class HelloClient4 {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         final RpcProxy rpcProxy = context.getBean(RpcProxy.class);
 
-        int threadNum = 50;
+        int threadNum = 10;
         int loopCount = 1000;
 
         ExecutorService executor = Executors.newFixedThreadPool(threadNum);
@@ -26,12 +26,13 @@ public class HelloClient4 {
             long start = System.currentTimeMillis();
 
             for (int i = 0; i < loopCount; i++) {
+                final int x = i;
                 executor.submit(new Runnable() {
                     @Override
                     public void run() {
                         HelloService helloService = rpcProxy.create(HelloService.class);
                         String result = helloService.hello("World");
-                        System.out.println(result);
+                        System.out.println(result+"-"+x);
                         latch.countDown();
                     }
                 });

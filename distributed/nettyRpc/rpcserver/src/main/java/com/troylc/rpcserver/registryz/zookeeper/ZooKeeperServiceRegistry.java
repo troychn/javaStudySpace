@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 基于 ZooKeeper 的服务注册接口实现
  *
- * @author huangyong
+ * @author troylc
  * @since 1.0.0
  */
 public class ZooKeeperServiceRegistry implements ServiceRegistry {
