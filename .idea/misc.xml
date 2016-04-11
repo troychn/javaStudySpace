@@ -3,6 +3,9 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <type id="Spring" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -20,7 +23,13 @@
         <option value="$PROJECT_DIR$/distributed/zookeeper/zkclient/pom.xml" />
         <option value="$PROJECT_DIR$/distributed/zookeeper/javaApi/pom.xml" />
         <option value="$PROJECT_DIR$/distributed/nettyDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/distributed/nettyRpc/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/distributed/nettyRpc/rpc-registryzookeeper/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">

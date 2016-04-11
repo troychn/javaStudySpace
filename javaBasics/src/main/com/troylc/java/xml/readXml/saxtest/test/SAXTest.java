@@ -2,8 +2,6 @@ package com.troylc.java.xml.readXml.saxtest.test;
 
 import com.troylc.java.xml.readXml.saxtest.entity.Book;
 import com.troylc.java.xml.readXml.saxtest.handler.SAXParserHandler;
-import com.troylc.java.xml.readXml.saxtest.entity.Book;
-import com.troylc.java.xml.readXml.saxtest.handler.SAXParserHandler;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -26,7 +24,7 @@ public class SAXTest {
 			SAXParser parser = factory.newSAXParser();
 			//创建SAXParserHandler对象
 			SAXParserHandler handler = new SAXParserHandler();
-			parser.parse(SAXTest.class.getResourceAsStream("/com/my/java/xml/readXml/books.xml"), handler);
+			parser.parse(SAXTest.class.getResourceAsStream("/com/troylc/java/xml/readXml/books.xml"), handler);
 			System.out.println("总共有" + handler.getBookList().size()
 					+ "本书");
 			for (Book book : handler.getBookList()) {

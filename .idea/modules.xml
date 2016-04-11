@@ -14,9 +14,14 @@
       <module fileurl="file://$PROJECT_DIR$/javaBasics/javaBasics.iml" filepath="$PROJECT_DIR$/javaBasics/javaBasics.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/javaStudySpace.iml" filepath="$PROJECT_DIR$/.idea/javaStudySpace.iml" />
       <module fileurl="file://$PROJECT_DIR$/distributed/nettyDemo/nettyDemo.iml" filepath="$PROJECT_DIR$/distributed/nettyDemo/nettyDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/nettyRpc/nettyRpc.iml" filepath="$PROJECT_DIR$/distributed/nettyRpc/nettyRpc.iml" />
       <module fileurl="file://$PROJECT_DIR$/distributed/rpc-zookeeper/provider/provider.iml" filepath="$PROJECT_DIR$/distributed/rpc-zookeeper/provider/provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/distributed/rpc-zookeeper/rpc-zookeeper.iml" filepath="$PROJECT_DIR$/distributed/rpc-zookeeper/rpc-zookeeper.iml" />
       <module fileurl="file://$PROJECT_DIR$/distributed/rpcDemo/rpcDemo.iml" filepath="$PROJECT_DIR$/distributed/rpcDemo/rpcDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/nettyRpc/rpcconsumer/rpcconsumer.iml" filepath="$PROJECT_DIR$/distributed/nettyRpc/rpcconsumer/rpcconsumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/nettyRpc/rpcinterfaces/rpcinterfaces.iml" filepath="$PROJECT_DIR$/distributed/nettyRpc/rpcinterfaces/rpcinterfaces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/nettyRpc/rpcprovider/rpcprovider.iml" filepath="$PROJECT_DIR$/distributed/nettyRpc/rpcprovider/rpcprovider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed/nettyRpc/rpcserver/rpcserver.iml" filepath="$PROJECT_DIR$/distributed/nettyRpc/rpcserver/rpcserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/distributed/rpc-zookeeper/rpcz/rpcz.iml" filepath="$PROJECT_DIR$/distributed/rpc-zookeeper/rpcz/rpcz.iml" />
       <module fileurl="file://$PROJECT_DIR$/distributed/zookeeper/zkclient/zkclient.iml" filepath="$PROJECT_DIR$/distributed/zookeeper/zkclient/zkclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/distributed/zookeeper/zookeeper.iml" filepath="$PROJECT_DIR$/distributed/zookeeper/zookeeper.iml" />

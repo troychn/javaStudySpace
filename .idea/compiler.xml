@@ -49,6 +49,40 @@
         <processorPath useClasspath="true" />
         <module name="nettyDemo" />
       </profile>
+      <profile default="false" name="Annotation profile for rpcserver" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="rpcserver" />
+      </profile>
+      <profile default="false" name="Annotation profile for rpc-registryzookeeper" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for rpcprovider" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="rpcprovider" />
+      </profile>
+      <profile default="false" name="Annotation profile for rpcinterfaces" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="rpcinterfaces" />
+      </profile>
+      <profile default="false" name="Annotation profile for rpcconsumer" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="rpcconsumer" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="consumer" target="1.5" />
@@ -61,7 +95,13 @@
       <module name="javaApi" target="1.5" />
       <module name="javaBasics" target="1.8" />
       <module name="nettyDemo" target="1.8" />
+      <module name="nettyRpc" target="1.8" />
       <module name="provider" target="1.5" />
+      <module name="rpc-registryzookeeper" target="1.8" />
+      <module name="rpcconsumer" target="1.8" />
+      <module name="rpcinterfaces" target="1.8" />
+      <module name="rpcprovider" target="1.8" />
+      <module name="rpcserver" target="1.8" />
       <module name="rpcz" target="1.5" />
       <module name="zkclient" target="1.5" />
       <module name="zookeeper" target="1.5" />
