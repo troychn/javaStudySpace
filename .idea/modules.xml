@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/distributed/WebCrawler/WebCrawler.iml" filepath="$PROJECT_DIR$/distributed/WebCrawler/WebCrawler.iml" />
       <module fileurl="file://$PROJECT_DIR$/distributed/rpc-zookeeper/consumer/consumer.iml" filepath="$PROJECT_DIR$/distributed/rpc-zookeeper/consumer/consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/distributed/zookeeper/curator/curator.iml" filepath="$PROJECT_DIR$/distributed/zookeeper/curator/curator.iml" />
       <module fileurl="file://$PROJECT_DIR$/distributed/distributed.iml" filepath="$PROJECT_DIR$/distributed/distributed.iml" />

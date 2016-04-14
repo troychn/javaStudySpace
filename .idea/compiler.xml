@@ -40,6 +40,7 @@
         <module name="javaApi" />
         <module name="provider" />
         <module name="rpcz" />
+        <module name="WebCrawler" />
         <module name="zkclient" />
       </profile>
       <profile default="false" name="Annotation profile for nettyDemo" enabled="true">
@@ -103,6 +104,7 @@
       <module name="rpcprovider" target="1.8" />
       <module name="rpcserver" target="1.8" />
       <module name="rpcz" target="1.5" />
+      <module name="WebCrawler" target="1.5" />
       <module name="zkclient" target="1.5" />
       <module name="zookeeper" target="1.5" />
     </bytecodeTargetLevel>

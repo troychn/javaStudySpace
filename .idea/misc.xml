@@ -24,6 +24,7 @@
         <option value="$PROJECT_DIR$/distributed/zookeeper/javaApi/pom.xml" />
         <option value="$PROJECT_DIR$/distributed/nettyDemo/pom.xml" />
         <option value="$PROJECT_DIR$/distributed/nettyRpc/pom.xml" />
+        <option value="$PROJECT_DIR$/distributed/WebCrawler/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
