@@ -88,7 +88,7 @@ package com.troylc.webcrawler.crawl;
 	 * @return CloseableHttpClient
 	 * @author TROYLC
 	 */
-	public static CloseableHttpClient createHttpClient(int maxTotal, int maxPerRoute,
+	private static CloseableHttpClient createHttpClient(int maxTotal, int maxPerRoute,
 													   int maxRoute, String hostname, int port) {
 		ConnectionSocketFactory plainsf = PlainConnectionSocketFactory.getSocketFactory();
 		LayeredConnectionSocketFactory sslsf = SSLConnectionSocketFactory.getSocketFactory();
