@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  */
-public class Seckill {
+public class Seckill extends BaseEntity {
 
     private long seckillId;
 

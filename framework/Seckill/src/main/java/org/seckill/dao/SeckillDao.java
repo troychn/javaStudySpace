@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  */
-public interface SeckillDao {
+public interface SeckillDao extends BaseDao<Seckill,Long> {
 
     /**
      * 减库存

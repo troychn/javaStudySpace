@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  */
-public class SuccessKilled {
+public class SuccessKilled extends BaseEntity {
 
     /**
      * 一个秒杀seckill对应多个成功记录

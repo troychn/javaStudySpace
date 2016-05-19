@@ -8,10 +8,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.util.*;
 
 import static org.junit.Assert.*;
 

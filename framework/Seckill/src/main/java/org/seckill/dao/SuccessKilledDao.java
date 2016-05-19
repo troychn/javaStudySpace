@@ -5,7 +5,7 @@ import org.seckill.entity.SuccessKilled;
 
 /**
  */
-public interface SuccessKilledDao {
+public interface SuccessKilledDao extends BaseDao<SuccessKilled,Long> {
 
 
     /**
